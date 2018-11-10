@@ -2,4 +2,4 @@
 ; public_names = name of the executables
 (library
   (name lib)
- (libraries mparser ))
+ (libraries mparser mparser.re))
