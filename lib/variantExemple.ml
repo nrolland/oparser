@@ -16,7 +16,8 @@ let operators =
 
 let decimal = many1_chars digit |>> int_of_string
 
-let expr = expression operators (decimal |>> fun i -> `Int i)
+let term = (decimal |>> fun i -> `Int i)
+let expr s  =  expression operators term s
 
 let rec calc = function
   | `Int i -> i
